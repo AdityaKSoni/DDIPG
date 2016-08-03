@@ -16,7 +16,7 @@ class CreateSemesterBranchesTable extends Migration
             $table->increments('semester_branch_id');
             $table->integer('semester_id');
             $table->integer('branch_id');
-            $table->unique(['semester_id', 'branch_id']);
+            $table->unique(['semester_id', 'branch_id'], 'semester_branch');
             $table->timestamps();
         });
     }

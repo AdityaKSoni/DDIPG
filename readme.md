@@ -18,4 +18,9 @@ The project is under development and will be live soon.
 	2.	```npm install --no-bin-links``` [Skip if not interested in front-end]
 	3.	```mv .env.example .env``` [After that change database information in the .env file according to your environment]
 	4.	```php artisan key:generate```
-	5.	```php artisan serve```
+	5.	```php artisan migrate```
+	6.	```php artisan db:seed```
+	7.	```php artisan serve```
+
+
+### Database Schema
