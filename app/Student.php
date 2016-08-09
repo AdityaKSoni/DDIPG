@@ -10,7 +10,7 @@ class Student extends Model
     protected $primaryKey = 'student_id';
     protected $fillable = ['enrollment_no', 'user_id', 'branch_id', 'semester_id'];
 
-    public function info() {
+    public function basicInfo() {
         return $this->belongsTo('App\User', 'user_id');
     }
 

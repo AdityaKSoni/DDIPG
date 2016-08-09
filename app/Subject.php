@@ -10,4 +10,8 @@ class Subject extends Model
     protected $primaryKey = 'subject_id';
     protected $fillable = ['subject_name', 'subject_code', 'subject_credits', 'subject_type_id'];
 
+    public function type() {
+        return $this->hasOne('App\SubjectType', 'subject_type_id');
+    }
+
 }
