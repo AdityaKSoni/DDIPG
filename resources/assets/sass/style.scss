@@ -1,2 +1,210 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
+$primary-color: #003169;
+$accent-color: #d8262e;
+$navbar-color: #fff;
+$background: #e4e5e6;
+$text-normal: #777;
+body {
+	background-color: $background;
+	-webkit-font-smoothing: antialiased;
+	.container,
+	.container-fluid {
+		.jumbotron,
+		.well {
+			-webkit-box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+			box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);
+		}
+	}
+}
+.form-group {
+	.checkbox {
+		span.checkbox-label {
+			margin-left: 8px;
+		}
+	}
+}
+.progress {
+	margin-bottom: 0;
+	background: transparent;
+}
+#well-login {
+	margin: 25px 0;
+	padding-top: 30px;
+}
+/* Sidebar and wrapper */
+header {
+	.navbar {
+		background: $navbar-color;
+		-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.3);
+		box-shadow: 0 1px 2px rgba(0,0,0,.3);
+		.navbar-header {
+			#menu-toggle {
+				background: $accent-color;
+				padding: 18px 20px;
+				border-radius: 0;
+				margin: 0 25px 0 -15px;
+			}
+			.navbar-brand {
+				color: $text-normal;
+				font-weight: 500;
+			}
+		}
+		.dropdown-menu li > a {
+			&:focus,
+			&:hover {
+				color: $accent-color;
+			}
+		}
+		.nav.navbar-nav li > a {
+			color: $primary-color;
+			text-transform: uppercase;
+			font-weight: 600;
+			&:hover {
+				color: $primary-color;
+			}
+		}
+		.nav.navbar-nav > .open > a {
+			color: $primary-color;
+			&:focus,
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+}
+/* Sidebar and wrapper */
+#menu-toggle {
+	display: block;
+}
+#wrapper {
+	padding-left: 0;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	&.toggled {
+		padding-left: 250px;
+	}
+}
+#sidebar-wrapper {
+	z-index: 1000;
+	position: fixed;
+	left: 250px;
+	width: 0;
+	height: 100%;
+	margin-left: -250px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	-o-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+#sidebar-wrapper #smoother,
+#wrapper.toggled #sidebar-wrapper {
+	width: 250px;
+}
+#page-content-wrapper {
+	width: 100%;
+	position: absolute;
+}
+#wrapper.toggled #page-content-wrapper {
+	position: absolute;
+	margin-right: -250px;
+}
+/* Sidebar Styles */
+.sidebar-nav {
+	top: 0;
+	width: 250px;
+	height: 100%;
+	margin-top: 70px;
+	padding: 10px 0 0;
+	list-style: none;
+	li {
+		a {
+			padding: 14px 20px 14px 52px;
+			display: block;
+			color: rgba(0,0,0,0.77);
+			font-weight: 500;
+			position: relative;
+			i {
+				position: absolute;
+				left: 16px;
+				font-size: 20px;
+				top: 0;
+				width: 25px;
+				text-align: center;
+				padding: 13px 0;
+			}
+		}
+		&.sub-menu {
+			ul {
+				list-style: none;
+				padding: 0;
+				li a {
+					color: #777;
+					padding: 8px 20px 8px 50px;
+					font-weight: 400;
+					font-size: 13px;
+					display: block;
+				}
+			}
+			.sub-menu-toggle {
+				&:after {
+					font: normal normal bold 18px/1 'Material Icons';
+					content: "\e5ce";
+					float: right;
+					color: #99AEB8;
+				}
+				&.collapsed:after {
+					/* symbol for "collapsed" panels */
+					content: "\e5cf";
+				}
+			}
+		}
+		a.active {
+			color: $accent-color;
+		}
+	}
+}
+.sidebar-nav li {
+	a {
+		&:hover {
+			color: $accent-color;
+		}
+		&:active,
+		&:focus,
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&.sub-menu ul li a.active:after {
+		font: normal normal bold 8px/2 'Material Icons';
+		content: "\e3fa";
+		float: left;
+		color: #8bd0ef;
+		padding-right: 12px;
+	}
+}
+@media (min-width: 768px) {
+	#wrapper {
+		padding-left: 250px;
+		&.toggled {
+			padding-left: 0;
+		}
+	}
+	#sidebar-wrapper {
+		width: 250px;
+	}
+	#wrapper.toggled #sidebar-wrapper {
+		width: 0;
+	}
+	#page-content-wrapper {
+		padding: 80px 16px 0;
+		position: relative;
+	}
+	#wrapper.toggled #page-content-wrapper {
+		position: relative;
+		margin-right: 0;
+	}
+}
+/* Sidebar and wrapper */

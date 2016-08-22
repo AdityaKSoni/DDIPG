@@ -16,7 +16,7 @@ The project is under development and will be live soon.
 3.	To run the project enter the following command in the project root directory one after another.
 	1. 	```composer install```
 	2.	```npm install --no-bin-links``` [Skip if not interested in front-end]
-	3.	```mv .env.example .env``` [After that change database information in the .env file according to your environment]
+	3.	```mv .env.example .env``` [After that change database and root user information in the .env file according to your environment]
 	4.	```php artisan key:generate```
 	5.	```php artisan migrate```
 	6.	```php artisan db:seed```
@@ -24,3 +24,5 @@ The project is under development and will be live soon.
 
 
 ### Database Schema
+
+![Database Schema](http://image.prntscr.com/image/554cede79d2f42b3acf6d50034133596.png "Database Schema")

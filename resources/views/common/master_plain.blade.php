@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="{!! asset('assets/css/bootstrap.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('assets/css/material.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('assets/css/ripples.min.css') !!}">
-    {{-- <link href="{{ elixir('assets/css/style.css') }}" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="{!! asset('assets/css/style.css') !!}">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 <body>
@@ -23,7 +23,8 @@
     <script src="{!! asset('assets/js/bootstrap.min.js') !!}"></script>
     <script src="{!! asset('assets/js/ripples.min.js') !!}"></script>
     <script src="{!! asset('assets/js/material.min.js') !!}"></script>
-    {{-- <script src="{{ elixir('assets/js/app.js') }}"></script> --}}
+    <script src="{!! asset('assets/js/pwstrength-bootstrap.js') !!}"></script>
+    <script src="{!! asset('assets/js/app.js') !!}"></script>
 
 </body>
 </html>
