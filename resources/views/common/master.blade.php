@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="{!! asset('assets/css/material.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('assets/css/ripples.min.css') !!}">
     <link rel="stylesheet" href="{!! asset('assets/css/snackbar.min.css') !!}" media="all">
-    {{-- <link href="{{ elixir('assets/css/style.css') }}" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="{!! asset('assets/css/style.css') !!}">
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 </head>
 <body>
@@ -34,7 +34,8 @@
     <script src="{!! asset('assets/js/ripples.min.js') !!}"></script>
     <script src="{!! asset('assets/js/material.min.js') !!}"></script>
     <script src="{!! asset('assets/js/snackbar.min.js') !!}"></script>
-    {{-- <script src="{{ elixir('assets/js/app.js') }}"></script> --}}
+    <script src="{!! asset('assets/js/pwstrength-bootstrap.js') !!}"></script>
+    <script src="{!! asset('assets/js/app.js') !!}"></script>
 
     @if(session()->has("flash_message"))
         <script type="text/javascript">
